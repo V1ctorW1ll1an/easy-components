@@ -18,7 +18,6 @@ easy-components
 │   │   │   ├── header.css
 │   │   │   ├── header.html
 │   │   │   ├── header.js
-│   │   │   └── output.css
 │   │   └── ...
 │   ├── index.html
 │   └── input.css
