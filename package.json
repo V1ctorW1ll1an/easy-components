@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "live-server",
-    "tailwind:build": "./scripts/build.sh build ${npm_config_component}",
-    "tailwind:watch": "./scripts/build.sh watch ${npm_config_component}"
+    "tailwind:minify": "./scripts/build.sh minify",
+    "tailwind:watch": "./scripts/build.sh watch",
+    "tailwind:minify:all": "./scripts/build.sh minify:all"
   },
   "keywords": [],
   "author": "",
