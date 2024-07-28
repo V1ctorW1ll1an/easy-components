@@ -3,9 +3,216 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <meta name="description" content="header component" />
+        <link rel="stylesheet" href="header.css" />
+        <title>header</title>
     </head>
-    <body>
-        <div class="text-green-800"></div>
+    <body class="h-screen">
+        <header class="bg-white shadow-lg relative">
+            <nav class="flex justify-between items-center container mx-auto">
+                <img
+                    class="cursor-pointer w-[129px]"
+                    height="129"
+                    width="129"
+                    src="/src/assets/logo/logo.png"
+                    alt="logo"
+                    title="logo"
+                />
+                <input type="checkbox" id="menu-toggle" class="peer hidden" />
+                <div
+                    class="duration-200 shadow-lg md:shadow-none md:static absolute bg-white left-0 w-full max-h-0 md:max-h-fit peer-checked:max-h-96 md:flex items-center justify-center px-5 top-[125px] overflow-hidden md:overflow-visible"
+                >
+                    <ul
+                        class="flex md:flex-row flex-col md:items-center md:gap-4 gap-8 pb-8 md:pb-0"
+                    >
+                        <li class="group relative flex flex-col gap-3">
+                            <input
+                                type="checkbox"
+                                id="toggle-dropdown"
+                                class="hidden peer/dropdown"
+                            />
+                            <div class="flex">
+                                <label
+                                    for="toggle-dropdown"
+                                    class="flex md:hidden items-center hover:text-gray-500 cursor-pointer"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        height="24px"
+                                        viewBox="0 -960 960 960"
+                                        width="24px"
+                                        fill="#581c87"
+                                    >
+                                        <path
+                                            d="M160-720v-80h640v80H160Zm0 560v-240h-40v-80l40-200h640l40 200v80h-40v240h-80v-240H560v240H160Zm80-80h240v-160H240v160Zm-38-240h556-556Zm0 0h556l-24-120H226l-24 120Z"
+                                        />
+                                    </svg>
+                                    <span class="ps-3">Products</span>
+                                    <svg
+                                        class="ml-2 transition-transform duration-200 transform group-has-[:checked]:rotate-180 md:group-hover:rotate-180"
+                                        width="16"
+                                        height="8"
+                                        viewBox="0 0 24 14"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M23.6803 2.31734L12.7718 13.2259C12.6705 13.3273 12.5502 13.4078 12.4177 13.4627C12.2853 13.5176 12.1434 13.5458 12 13.5458C11.8566 13.5458 11.7147 13.5176 11.5823 13.4627C11.4498 13.4078 11.3295 13.3273 11.2282 13.2259L0.319681 2.31734C0.114993 2.11265 0 1.83503 0 1.54556C0 1.25609 0.114993 0.978471 0.319681 0.773782C0.52437 0.569094 0.801987 0.454102 1.09146 0.454102C1.38093 0.454102 1.65855 0.569094 1.86324 0.773782L12 10.9119L22.1368 0.773782C22.2381 0.672431 22.3584 0.592035 22.4909 0.537184C22.6233 0.482333 22.7652 0.454102 22.9085 0.454102C23.0519 0.454102 23.1938 0.482333 23.3262 0.537184C23.4586 0.592035 23.579 0.672431 23.6803 0.773782C23.7817 0.875134 23.8621 0.995456 23.9169 1.12788C23.9718 1.2603 24 1.40223 24 1.54556C24 1.68889 23.9718 1.83082 23.9169 1.96325C23.8621 2.09567 23.7817 2.21599 23.6803 2.31734Z"
+                                            fill="black"
+                                        ></path>
+                                    </svg>
+                                </label>
+                                <label
+                                    for="toggle-dropdown"
+                                    class="hidden md:flex items-center hover:text-gray-500 cursor-pointer"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        height="24px"
+                                        viewBox="0 -960 960 960"
+                                        width="24px"
+                                        fill="#581c87"
+                                    >
+                                        <path
+                                            d="M160-720v-80h640v80H160Zm0 560v-240h-40v-80l40-200h640l40 200v80h-40v240h-80v-240H560v240H160Zm80-80h240v-160H240v160Zm-38-240h556-556Zm0 0h556l-24-120H226l-24 120Z"
+                                        />
+                                    </svg>
+                                    <span class="ps-3">Products</span>
+                                    <svg
+                                        class="ml-2 transition-transform duration-200 transform group-has-[:checked]:rotate-180 md:group-hover:rotate-180"
+                                        width="16"
+                                        height="8"
+                                        viewBox="0 0 24 14"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M23.6803 2.31734L12.7718 13.2259C12.6705 13.3273 12.5502 13.4078 12.4177 13.4627C12.2853 13.5176 12.1434 13.5458 12 13.5458C11.8566 13.5458 11.7147 13.5176 11.5823 13.4627C11.4498 13.4078 11.3295 13.3273 11.2282 13.2259L0.319681 2.31734C0.114993 2.11265 0 1.83503 0 1.54556C0 1.25609 0.114993 0.978471 0.319681 0.773782C0.52437 0.569094 0.801987 0.454102 1.09146 0.454102C1.38093 0.454102 1.65855 0.569094 1.86324 0.773782L12 10.9119L22.1368 0.773782C22.2381 0.672431 22.3584 0.592035 22.4909 0.537184C22.6233 0.482333 22.7652 0.454102 22.9085 0.454102C23.0519 0.454102 23.1938 0.482333 23.3262 0.537184C23.4586 0.592035 23.579 0.672431 23.6803 0.773782C23.7817 0.875134 23.8621 0.995456 23.9169 1.12788C23.9718 1.2603 24 1.40223 24 1.54556C24 1.68889 23.9718 1.83082 23.9169 1.96325C23.8621 2.09567 23.7817 2.21599 23.6803 2.31734Z"
+                                            fill="black"
+                                        ></path>
+                                    </svg>
+                                </label>
+                            </div>
+                            <ul
+                                class="hidden bg-red peer-checked/dropdown:block md:group-hover:block md:absolute md:-right-10 top-[1.3rem] pt-2 md:bg-gray-50 md:w-40 md:text-left md:shadow-lg md:rounded-md"
+                            >
+                                <div
+                                    class="flex flex-col justify-center md:block"
+                                >
+                                    <li
+                                        class="py-2 px-4 hover:text-gray-800 max-w-md md:max-w-full"
+                                    >
+                                        <a
+                                            class="text-xs h-full w-full"
+                                            href="#"
+                                            >Product 1</a
+                                        >
+                                    </li>
+                                    <li
+                                        class="py-2 px-4 hover:text-gray-800 max-w-md md:max-w-full"
+                                    >
+                                        <a
+                                            class="text-xs h-full w-full"
+                                            href="#"
+                                            >Product 2</a
+                                        >
+                                    </li>
+                                    <li
+                                        class="py-2 px-4 hover:text-gray-800 max-w-md md:max-w-full"
+                                    >
+                                        <a
+                                            class="text-xs h-full w-full"
+                                            href="#"
+                                            >Product 3</a
+                                        >
+                                    </li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="hover:text-gray-500 flex gap-3" href="#"
+                                ><svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="24px"
+                                    viewBox="0 -960 960 960"
+                                    width="24px"
+                                    fill="#581c87"
+                                >
+                                    <path
+                                        d="M160-720v-80h640v80H160Zm0 560v-240h-40v-80l40-200h640l40 200v80h-40v240h-80v-240H560v240H160Zm80-80h240v-160H240v160Zm-38-240h556-556Zm0 0h556l-24-120H226l-24 120Z"
+                                    /></svg
+                                >Solution</a
+                            >
+                        </li>
+                        <li>
+                            <a class="hover:text-gray-500 flex gap-3" href="#"
+                                ><svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="24px"
+                                    viewBox="0 -960 960 960"
+                                    width="24px"
+                                    fill="#581c87"
+                                >
+                                    <path
+                                        d="M160-720v-80h640v80H160Zm0 560v-240h-40v-80l40-200h640l40 200v80h-40v240h-80v-240H560v240H160Zm80-80h240v-160H240v160Zm-38-240h556-556Zm0 0h556l-24-120H226l-24 120Z"
+                                    /></svg
+                                >Resource</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="flex items-center gap-6 peer-checked:hidden transition-all"
+                >
+                    <button
+                        class="bg-purple-800 text-white px-5 py-2 rounded-full hover:bg-purple-900 select-none"
+                    >
+                        Button
+                    </button>
+                    <label
+                        for="menu-toggle"
+                        class="cursor-pointer md:hidden size-8 mr-2 md:mr-0"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="32px"
+                            viewBox="0 -960 960 960"
+                            width="32px"
+                            fill="#000000"
+                        >
+                            <path
+                                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                            />
+                        </svg>
+                    </label>
+                </div>
+
+                <div
+                    class="hidden peer-checked:flex items-center gap-6 transition-all"
+                >
+                    <button
+                        class="bg-purple-800 text-white px-5 py-2 rounded-full hover:bg-purple-900 select-none"
+                    >
+                        Button
+                    </button>
+                    <label
+                        for="menu-toggle"
+                        class="cursor-pointer md:hidden size-8 mr-2 md:mr-0"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="32px"
+                            viewBox="0 -960 960 960"
+                            width="32px"
+                            fill="#000000"
+                        >
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                            />
+                        </svg>
+                    </label>
+                </div>
+            </nav>
+        </header>
     </body>
 </html>
